@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 82: expected menuitem
+    if g == d and g :
+    ^
+
+Ren'Py Version: Ren'Py 7.4.2.1292
+Wed Jun 23 18:04:45 2021
