@@ -1,1 +1,6 @@
 */cache/*
+errors.txt
+log.txt
+*/saves/*
+script.rpyc
+.vscode/*
