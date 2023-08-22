@@ -2,5 +2,5 @@
 errors.txt
 log.txt
 */saves/*
-script.rpyc
+*.rpyc
 .vscode/*
