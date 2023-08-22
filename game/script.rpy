@@ -1,3 +1,4 @@
+# Ceci est un commentaire test, à supprimer plus tard
 
 # Déclarez les personnages utilisés dans le jeu.
 define swan = Character('???', color="#c8ffc8")
