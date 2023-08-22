@@ -1,26 +1,11 @@
-# Ceci est un commentaire test, à supprimer plus tard
-
-# Déclarez les personnages utilisés dans le jeu.
+# Déclaration des personnages
 define swan = Character('???', color="#c8ffc8")
 define petite = Character('???', color="#c8ffc8")
 define grande = Character('???', color="#c8ffc8")
 define yeonho = Character('???', color="#c8ffc8")
 
-# Raccourci pour les images du mc
-image mc_angry = "mc/mc_angry.png"
-image mc_asking = "mc/mc_asking.png"
-image mc_dead = "mc/mc_dead.png" #Pas encore utilisé
-image mc_doubt = "mc/mc_doubt.png"
-image mc_happy = "mc/mc_happy.png" #Pas encore utilisé
-image mc_laughing = "mc/mc_laughing.png" #Pas encore utilisé
-image mc_neutral = "mc/mc_neutral.png"
-image mc_sad = "mc/mc_sad.png" #Pas encore utilisé
-image mc_scared = "mc/mc_scared.png" #Pas encore utilisé
-image mc_shocked = "mc/mc_shocked.png"
-image mc_sleep = "mc/mc_sleep.png" #Pas encore utilisé
-image mc_stressed = "mc/mc_stressed.png"
-
 # CG
+# TODO images des perso à redimensionner
 
 image CG_miroir_swan = "CG_miroir_swan.jpg"
 
@@ -75,7 +60,7 @@ label salle:
         jump secret
 
     if g:
-        show mc_neutral
+        show mc neutral
 
 menu:
     "Porte à gauche" :
@@ -131,18 +116,18 @@ label soeur:
     $d = True
     scene
     if g:
-        show mc_neutral
+        show mc neutral
 
     "On pouvait y discerner un lit et une armoire, ainsi qu'un bureau et une petite étagère."
 
     if g:
-        show mc_doubt
+        show mc doubt
     swan "La chambre d'une petite fille je suppose, d'après le décor ... "
     "Les couvertures du lit étaient d'un rose pâle et jaune pastel, avec plusieurs peluches à côté des oreillers."
     "En regardant dans l'armoire, mes suppositions devinrent des affirmations suite au nombre de robes et d'accessoires présents."
 
     if g:
-        show mc_neutral
+        show mc neutral
     "Pour trouver des informations, je me suis dirigée vers le bureau, espérant trouver quelque chose d'intéressant."
     swan "Une photo ... sûrement la propriétaire de la chambre ... "
     "Une petite fille blonde aux yeux émeraudes souriait à la caméra, une peluche à la main, dans ce qui ressemblait à un jardin."
@@ -151,29 +136,29 @@ label soeur:
     jump salle
 
 label secret:
-    show mc_stressed
+    show mc stressed
     swan "Bon, c'est bien beau tout ça, mais j'ai toujours aucune information ..."
     "Et en me triturant le cerveau, je remarquais la porte derrière l'endroit où je m'étais réveillée..."
     swan "Et dire que je l'avais même pas remarquée ..."
     "Ne voulant pas trop m'enfoncer dans un lieu inconnu, j'ouvris cette dernière porte, espérant trouver plus que dans les deux autres salles sur le pourquoi du comment je suis arrivée ici."
 
     scene
-    show mc_neutral
+    show mc neutral
     swan "Une autre chambre... Pour quelqu'un de plus âgé vu la taille du lit ..."
     "Cette chambre avait les mêmes meubles que la précédente, un lit, une armoire, un bureau et une étagère."
     "Elle était cependant moins féminine. La seule manière de savoir était les vêtements dans l'armoire, qui comportaient des robes, des chemises, des jeans et des t-shirts."
     swan "Cherchons au même endroit que la précédente chambre, je trouverais peut être quelque chose cette fois..."
     "Après avoir fermé l'armoire, je me tournais vers le bureau, et comme dans la chambre précédente, la photo de la propriétaire de la chambre était présente."
 
-    show mc_shocked
+    show mc shocked
     swan "Qu'est-ce que ... quoi ?"
     "Une fille aux cheveux blonds me ressemblant comme deux gouttes d'eau se tenait sur la photo."
     "Elle souriait et tenait un bouquet de fleurs fait à la va-vite, avec une couronne de fleurs sur la tête, s'accordant à la robe d'été qu'elle portait."
     "La seule différence étant le papillon non présent sur le visage de la jeune fille."
 
     petite "Tiens, qu'est-ce qu'elle fait là ?"
-    hide mc_neutral
-    show mc_shocked at left
+    hide mc neutral
+    show mc shocked at left
     swan "Ahhh !!!"
 
     #show les deux filles
@@ -195,20 +180,20 @@ label secret:
     "Mince, j'ai leur attention !!!"
 
     petite "Dis, est-ce que tu sais ce que tu fais ici ?"
-    show mc_neutral at left
+    show mc neutral at left
     swan "Non ..."
     petite "Comme ce qu'on pensait..."
     grande "Je te conseille de chercher ces livres dans le bâtiments, ils pourraient t'être très utiles."
 
     "Celle qui était toujours près de la bibliothèque pointa vers un livre."
-    show mc_asking at left
+    show mc asking at left
     "En m'approchant, je vis que le livre en question ressemblait à une histoire pour enfants. La couverture n'avait qu'un mot, « Swan »."
 
     swan "Mais qu'est-ce qui se passe ici à la fin… Vous êtes-"
     #hide les deux filles
     "J'allais demander aux deux filles panda ce qu'elles savaient, mais en me retournant, elles avaient disparu."
 
-    show mc_shocked
+    show mc shocked
     swan "Quoi ?! Mais elles étaient la il y a deux secondes !!"
     "N'ayant rien de mieux à faire qu'écouter leur conseil, j'ouvris le conte."
 
@@ -229,49 +214,49 @@ label secret:
     # fin du conte
 
     scene
-    show mc_neutral
+    show mc neutral
 
     swan "...Cette histoire me rappelle vaguement quelque chose..."
     yeonho "Tiens, qu'est-ce que tu fais là, petite ?"
 
-    hide mc_neutral
-    show mc_shocked at left
+    hide mc neutral
+    show mc shocked at left
     swan "AHHH !"
     #show at right
     yeonho "Oh ? Je t'ai fais peur ? J'en suis navrée, ce n'était pas mon but."
 
-    hide mc_shocked
-    show mc_stressed at left
+    hide mc shocked
+    show mc stressed at left
     "Encore une ... d'où est-ce qu'elles sortent à la fin ?!"
     swan "Est-ce qu'on pourrait enfin m'expliquer ce qu'il se passe... ?"
 
     yeonho "Bien sûr ! Avant de commencer, je m'appelle Yeonho, et je vis dans ce manoir !"
     $yeonho = Character('Yeonho', color="#c8ffc8")
 
-    #hide mc_stressed
-    show mc_doubt at left
+    #hide mc stressed
+    show mc doubt at left
     swan "Enchantée, je suppose..."
     yeonho "Cet endroit est une réalité alternative, ou monde parallèle, si tu préfère."
     yeonho "Tu as été amenée ici contre ton gré et ton cerveau a lancé un système de défense pour réagir, ce qui explique ta perte de mémoire."
 
-    #hide mc_doubt
-    show mc_asking at left
+    #hide mc doubt
+    show mc asking at left
     swan "Je vois... Mais comment t'es au courant que je ne me rappelle de rien ?!"
     yeonho "Fufufu, j'ai des oreilles partout petite, et tes paroles peuvent confirmer mes propos."
 
     "Je baissais la tête, embarrassée."
 
-    #hide mc_asking
-    show mc_neutral at left
+    #hide mc asking
+    show mc neutral at left
     swan "Il va vraiment falloir que je fasse attention à ce que je dis..."
     swan "Sinon, tu connais un moyen de sortir d'ici ? Et de récupérer ma mémoire ?"
     swan "Pas que j'aime pas l'endroit, mais c'est légèrement effrayant et je préfère rentrer chez moi intacte..."
 
     "Mais en relevant la tête..."
 
-    #hide mc_neutral
+    #hide mc neutral
     scene
-    show mc_angry
+    show mc angry
     swan "Elle aussi elle a disparu sans rien dire ?! Pourquoi personne ne m'aide ici ?!"
 
     "Je suis donc sortie de la chambre qui semblait m'appartenir et partie chercher la sortie de cet endroit."
