@@ -4,3 +4,4 @@ log.txt
 */saves/*
 *.rpyc
 .vscode/*
+traceback.txt
